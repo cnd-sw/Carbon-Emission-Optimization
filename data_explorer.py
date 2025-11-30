@@ -27,7 +27,7 @@ def load_all_data():
         'sample_submission': pd.read_csv('sample_submission.csv')
     }
     
-    print("✓ All data loaded successfully!\n")
+    print("All data loaded successfully!\n")
     return data
 
 def explore_carbon_targets(df):
@@ -229,7 +229,7 @@ def create_visualizations(data):
     
     plt.tight_layout()
     plt.savefig('data_overview.png', dpi=300, bbox_inches='tight')
-    print("✓ Saved visualization to 'data_overview.png'\n")
+    print("Saved visualization to 'data_overview.png'\n")
     plt.show()
 
 def main():

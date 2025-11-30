@@ -244,4 +244,4 @@ Where:
 4. What's the optimal vehicle replacement cycle?
 5. How much should you invest in bio-fuels vs. waiting for cheaper electricity?
 
-Good luck with your optimization! 🚛⚡🌱
+Good luck with your optimization!

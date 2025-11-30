@@ -1,18 +1,18 @@
 # Carbon Emission Optimization - Shell.ai
 
-## 🎯 Problem Statement
+## Problem Statement
 
 This is a **Fleet Optimization Challenge** from Shell.ai focused on minimizing carbon emissions from a commercial vehicle fleet over 16 years (2023-2038) while meeting transportation demand.
 
 ### Objective
 **Minimize total carbon emissions by 79.4%** (from 11.7M to 2.4M) while:
-- ✅ Meeting all transportation demand (growing from 17M to 25M km)
-- ✅ Managing fleet costs (purchase, fuel, maintenance, insurance)
-- ✅ Balancing vehicle types (BEV, Diesel, LNG) and fuel choices
+- Meeting all transportation demand (growing from 17M to 25M km)
+- Managing fleet costs (purchase, fuel, maintenance, insurance)
+- Balancing vehicle types (BEV, Diesel, LNG) and fuel choices
 
 ---
 
-## 📊 Data Files
+## Data Files
 
 | File | Description | Key Info |
 |------|-------------|----------|
@@ -26,7 +26,7 @@ This is a **Fleet Optimization Challenge** from Shell.ai focused on minimizing c
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Explore the Data
 ```bash
@@ -57,15 +57,15 @@ This will:
 - Electricity cost drops 45.8%
 
 **Fuel Emissions (kg CO2/unit):**
-- Electricity: 0.000 ⚡
-- BioLNG: 0.378 🌱
-- HVO: 0.488 🌱
-- LNG: 2.486 ⛽
-- B20: 3.049 ⛽
+- Electricity: 0.000
+- BioLNG: 0.378
+- HVO: 0.488
+- LNG: 2.486
+- B20: 3.049
 
 ---
 
-## 💡 Solution Approach
+## Solution Approach
 
 ### Decision Variables
 For each year, decide:
@@ -86,7 +86,7 @@ For each year, decide:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Carbon-Emission-Optimization/
@@ -105,17 +105,17 @@ Carbon-Emission-Optimization/
 
 ---
 
-## 🔧 Next Steps
+## Next Steps
 
-1. ✅ **Understand the data** - Run `data_explorer.py`
-2. ✅ **Read the overview** - Review `PROJECT_OVERVIEW.md`
-3. 🔨 **Build optimizer** - Create optimization model (LP/MIP)
-4. 🧪 **Validate solution** - Check constraints and objectives
-5. 📤 **Generate submission** - Format as `sample_submission.csv`
+1. **Understand the data** - Run `data_explorer.py`
+2. **Read the overview** - Review `PROJECT_OVERVIEW.md`
+3. **Build optimizer** - Create optimization model (LP/MIP)
+4. **Validate solution** - Check constraints and objectives
+5. **Generate submission** - Format as `sample_submission.csv`
 
 ---
 
-## 🏆 Success Criteria
+## Success Criteria
 
 - [x] All demand met for every year/size/distance combination
 - [x] Carbon emission targets achieved
@@ -124,7 +124,7 @@ Carbon-Emission-Optimization/
 
 ---
 
-## 📚 Resources
+## Resources
 
 - **Optimization Libraries**: `pulp`, `scipy.optimize`, `cvxpy`
 - **Data Analysis**: `pandas`, `numpy`, `matplotlib`
@@ -132,4 +132,4 @@ Carbon-Emission-Optimization/
 
 ---
 
-**Good luck optimizing! 🚛⚡🌱**
+**Good luck optimizing!**
