@@ -1,0 +1,33 @@
+Running HiGHS 1.8.0 (git hash: unknown): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [6e-02, 1e+05]
+  Cost   [9e-02, 4e+05]
+  Bound  [0e+00, 0e+00]
+  RHS    [2e+03, 1e+07]
+WARNING: No semi-integer/integer variables in model with non-empty integrality
+Presolving model
+4264 rows, 5272 cols, 13896 nonzeros  0s
+2729 rows, 4167 cols, 12462 nonzeros  0s
+2214 rows, 3514 cols, 11321 nonzeros  0s
+1625 rows, 2828 cols, 9363 nonzeros  0s
+1232 rows, 2423 cols, 8460 nonzeros  0s
+1106 rows, 2297 cols, 8208 nonzeros  0s
+Presolve : Reductions: rows 1106(-3350); columns 2297(-3167); elements 8208(-6072)
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0    -8.6571596099e+02 Ph1: 748(2427.93); Du: 542(865.716) 0s
+        889     1.4614460358e+08 Pr: 0(0); Du: 0(8.10463e-15) 0s
+Solving the original LP from the solution after postsolve
+Model status        : Optimal
+Simplex   iterations: 889
+Objective value     :  1.4614460358e+08
+Relative P-D gap    :  4.0784704544e-16
+HiGHS run time      :          0.02
+Loading data...
+Data loaded.
+Creating variables...
+Adding constraints...
+Solving with 5464 variables and 4456 constraints...
+Solver Status: True, Message: Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Submission saved to submission.csv

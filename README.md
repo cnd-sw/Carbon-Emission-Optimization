@@ -105,13 +105,27 @@ Carbon-Emission-Optimization/
 
 ---
 
-## Next Steps
+## How to Run
 
-1. **Understand the data** - Run `data_explorer.py`
-2. **Read the overview** - Review `PROJECT_OVERVIEW.md`
-3. **Build optimizer** - Create optimization model (LP/MIP)
-4. **Validate solution** - Check constraints and objectives
-5. **Generate submission** - Format as `sample_submission.csv`
+### 1. Install Dependencies
+```bash
+pip install pandas numpy scipy
+```
+
+### 2. Run the Optimizer
+```bash
+python optimizer.py
+```
+This will:
+- Load all data files
+- Build the optimization model using `scipy.optimize.milp`
+- Solve for the optimal fleet strategy
+- Generate `submission.csv` with the results
+
+### 3. Explore Data (Optional)
+```bash
+python data_explorer.py
+```
 
 ---
 
