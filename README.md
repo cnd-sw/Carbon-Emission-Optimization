@@ -146,4 +146,3 @@ python data_explorer.py
 
 ---
 
-**Good luck optimizing!**
