@@ -1,3 +1,159 @@
+Data Explorer run:
+
+============================================================
+SHELL.AI CARBON EMISSION OPTIMIZATION - DATA EXPLORER
+============================================================
+
+Loading data files...
+All data loaded successfully!
+
+============================================================
+CARBON EMISSION TARGETS
+============================================================
+
+Total years: 16
+Starting emissions (2023): 11,677,957
+Target emissions (2038): 2,404,387
+Required reduction: 79.4%
+
+Average yearly reduction: -618,238
+
+
+============================================================
+TRANSPORTATION DEMAND
+============================================================
+
+Total demand 2023: 17,176,445 km
+Total demand 2038: 25,298,118 km
+Demand growth: 47.3%
+
+Demand by vehicle size (2023):
+  S1:    7,172,601 km ( 41.8%)
+  S2:    3,290,575 km ( 19.2%)
+  S3:    5,823,268 km ( 33.9%)
+  S4:      890,001 km (  5.2%)
+
+Demand by distance category (2023):
+  D1:    4,062,926 km ( 23.7%)
+  D2:    7,166,908 km ( 41.7%)
+  D3:    5,191,384 km ( 30.2%)
+  D4:      755,227 km (  4.4%)
+
+
+============================================================
+VEHICLE OPTIONS
+============================================================
+
+Vehicle types available:
+  BEV: 64 variants
+  Diesel: 64 variants
+  LNG: 64 variants
+
+Vehicle costs in 2023:
+
+  Size S1:
+       BEV: $ 187,000 (range: 102,000 km/year)
+    Diesel: $  85,000 (range: 102,000 km/year)
+       LNG: $ 100,000 (range: 102,000 km/year)
+
+  Size S2:
+       BEV: $ 272,000 (range: 106,000 km/year)
+    Diesel: $ 104,000 (range: 106,000 km/year)
+       LNG: $ 133,000 (range: 106,000 km/year)
+
+  Size S3:
+       BEV: $ 309,090 (range: 73,000 km/year)
+    Diesel: $ 118,181 (range: 73,000 km/year)
+       LNG: $ 151,136 (range: 73,000 km/year)
+
+  Size S4:
+       BEV: $ 395,636 (range: 118,000 km/year)
+    Diesel: $ 151,272 (range: 118,000 km/year)
+       LNG: $ 193,454 (range: 118,000 km/year)
+
+BEV cost reduction over time (Size S1):
+  2023: $187,000
+  2030: $130,589
+  2038: $130,589
+
+
+============================================================
+FUEL OPTIONS
+============================================================
+
+Fuel comparison (2023):
+Fuel         Emissions    Cost        
+----------------------------------------
+B20          3.049        $1.221       
+BioLNG       0.378        $1.088       
+Electricity  0.000        $0.192       
+HVO          0.488        $1.814       
+LNG          2.486        $1.012       
+
+Electricity cost trend:
+  2023: $0.192/kWh
+  2038: $0.104/kWh
+  Reduction: 45.8%
+
+
+============================================================
+VEHICLE-FUEL COMPATIBILITY
+============================================================
+
+Fuel options by vehicle type:
+  BEV: Electricity
+  Diesel: B20, HVO
+  LNG: LNG, BioLNG
+
+Average consumption rates (2023):
+  BEV: 0.897 units/km
+  Diesel: 0.223 units/km
+  LNG: 0.166 units/km
+
+
+============================================================
+VEHICLE LIFECYCLE COSTS
+============================================================
+
+Depreciation schedule:
+Year   Resale %   Insurance %  Maintenance %  
+--------------------------------------------------
+1      90         5            1              
+2      80         6            3              
+3      70         7            5              
+4      60         8            7              
+5      50         9            9              
+6      40         10           11             
+7      30         11           13             
+8      30         12           15             
+9      30         13           17             
+10     30         14           19             
+
+Key insights:
+  - Year 1 resale value: 90%
+  - Year 10 resale value: 30%
+  - Total depreciation: 60%
+
+
+============================================================
+CREATING VISUALIZATIONS
+============================================================
+Saved visualization to 'data_overview.png'
+
+============================================================
+EXPLORATION COMPLETE!
+============================================================
+
+Next steps:
+1. Review the visualizations in 'data_overview.png'
+2. Read 'PROJECT_OVERVIEW.md' for detailed problem explanation
+3. Start building your optimization model
+
+
+============================================================
+OPTIMIZATION RUN
+============================================================
+
 Running HiGHS 1.8.0 (git hash: unknown): Copyright (c) 2024 HiGHS under MIT licence terms
 Coefficient ranges:
   Matrix [6e-02, 1e+05]
