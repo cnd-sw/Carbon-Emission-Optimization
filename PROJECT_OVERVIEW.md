@@ -228,11 +228,11 @@ Where:
 
 ## Key Success Factors
 
-✅ **Meet all demand** - This is non-negotiable  
-✅ **Minimize emissions** - Primary objective  
-✅ **Balance costs** - Don't overspend on unnecessary vehicles  
-✅ **Plan long-term** - Decisions in 2023 affect 2038  
-✅ **Leverage technology trends** - BEV costs decrease, bio-fuels become competitive
+- **Meet all demand** - This is non-negotiable  
+- **Minimize emissions** - Primary objective  
+- **Balance costs** - Don't overspend on unnecessary vehicles  
+- **Plan long-term** - Decisions in 2023 affect 2038  
+- **Leverage technology trends** - BEV costs decrease, bio-fuels become competitive
 
 ---
 

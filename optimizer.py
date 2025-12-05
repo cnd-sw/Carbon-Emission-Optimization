@@ -130,7 +130,7 @@ def solve_optimization():
             for s in sizes:
                 # Buy
                 cost = vehicle_cost.get((v, s, t), 0)
-                buy_vars[(t, v, s)] = model.add_variable(f"Buy_{t}_{v}_{s}", 'continuous', obj=cost)
+                buy_vars[(t, v, s)] = model.add_variable(f"Buy_{t}_{v}_{s}", 'integer', obj=cost)
                 
                 # Fleet (Age 0 to 10)
                 for age in range(11):
@@ -142,7 +142,7 @@ def solve_optimization():
                         ins_rate = insurance_profile.get(age, 0) / 100.0
                         holding_cost = price * (maint_rate + ins_rate)
                         
-                        fleet_vars[(t, v, s, age)] = model.add_variable(f"Fleet_{t}_{v}_{s}_{age}", 'continuous', obj=holding_cost)
+                        fleet_vars[(t, v, s, age)] = model.add_variable(f"Fleet_{t}_{v}_{s}_{age}", 'integer', obj=holding_cost)
                 
                 # Sell (Age 1 to 10)
                 for age in range(1, 11):
@@ -153,14 +153,14 @@ def solve_optimization():
                         resale_rate = resale_profile.get(age, 0) / 100.0
                         resale_value = -1 * price * resale_rate
                         
-                        sell_vars[(t, v, s, age)] = model.add_variable(f"Sell_{t}_{v}_{s}_{age}", 'continuous', obj=resale_value)
+                        sell_vars[(t, v, s, age)] = model.add_variable(f"Sell_{t}_{v}_{s}_{age}", 'integer', obj=resale_value)
 
                 # Use & Km
                 for d in distances:
                     for f in fuels:
                         if (v, s, t, f) in consumption:
                             # Use (Integer vehicles)
-                            use_vars[(t, v, s, d, f)] = model.add_variable(f"Use_{t}_{v}_{s}_{d}_{f}", 'continuous', obj=0)
+                            use_vars[(t, v, s, d, f)] = model.add_variable(f"Use_{t}_{v}_{s}_{d}_{f}", 'integer', obj=0)
                             
                             # Km (Continuous)
                             # Fuel Cost associated with Km
@@ -339,14 +339,24 @@ def solve_optimization():
                 
                 # From prev year
                 if t > 2023:
-                    for age in range(11):
-                        if (t-1, v, s, age) in fleet_vars:
-                            idx = fleet_vars[(t-1, v, s, age)]
-                            count = int(round(get_val(idx)))
-                            if count > 0:
-                                year_bought = (t-1) - age
+                    for age in range(1, 11):
+                        # Previous fleet was at age-1
+                        if (t-1, v, s, age-1) in fleet_vars:
+                            idx_prev = fleet_vars[(t-1, v, s, age-1)]
+                            count_prev = int(round(get_val(idx_prev)))
+                            
+                            # Check if sold this year (at current age)
+                            count_sold = 0
+                            if (t, v, s, age) in sell_vars:
+                                idx_sell = sell_vars[(t, v, s, age)]
+                                count_sold = int(round(get_val(idx_sell)))
+                            
+                            available = count_prev - count_sold
+                            
+                            if available > 0:
+                                year_bought = t - age
                                 vid = f"{v}_{s}_{year_bought}"
-                                pool.append({'id': vid, 'count': count})
+                                pool.append({'id': vid, 'count': available})
                 
                 # Buy
                 idx = buy_vars[(t, v, s)]
